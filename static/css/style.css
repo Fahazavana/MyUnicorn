@@ -108,12 +108,13 @@ figure[class="col-25"] > img {
   width: 100%;
 }
 
-figure[class="col-25"] > img + figcaption {
+figure[class="col-25"] > figcaption {
   color: white;
   bottom: 1.6rem;
-  padding: 0.2rem 5re;
+  padding: 0.5rem;
   text-align: center;
   position: relative;
+  font-weight: 500;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -173,11 +174,35 @@ iframe {
   box-shadow: 0 0 0.5rem #eb43a3;
 }
 
+/*************** footer ***********************/
+footer {
+  bottom: 0;
+  padding: 1vh;
+  margin-top: 5vh;
+  position: relative;
+  background-color: #eb43a3;
+}
+footer p {
+  color: #fff;
+  text-align: right;
+  font-weight: bold;
+}
+
+
+
+/*** Le conteneur pour fixer le pied de page en bas ***/
+.conteneur{
+  height: auto!important;
+  min-height: 90vh;
+}
+
+
 /* permet d' enlever certain effet indésirible de la propriété float
  en insérent un contenu vide apres le le conténeur des flottant ::after, puis annulé 
  les flottant, puis et mettant lélement endisplay table
 
 */
+
 
 .clearfix::after {
   content: "";
