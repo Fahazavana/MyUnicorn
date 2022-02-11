@@ -72,9 +72,19 @@ nav > ul li {
 }
 
 nav > ul li a {
-  display: inline-block;
   padding: 0.9rem;
+  display: inline-block;
 }
+/**************** Devise ********************/
+#devise h1{
+  margin: 0;
+  text-align: center;
+  padding: 5rem 0 2rem;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/rainbow.png");
+}
+
 
 /* permet d' enlever certain effet indésirible de la propriété float
  en insérent un contenu vide apres le le conténeur des flottant ::after, puis annulé 
