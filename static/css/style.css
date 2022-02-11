@@ -1,0 +1,89 @@
+@font-face {
+  font-family: Courgette;
+  src: url("../font/Courgette/Courgette-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial,sans-serf;
+}
+
+/************ style partagé par plusieur élement **********************/
+.font-courgette {
+  font-family: Courgette, cursive;
+}
+
+.rose-claire {
+  color: #eb43a3;
+}
+
+.rose-sombre {
+  color: #c55394;
+}
+/************ Menu ****************/
+header {
+  background-color: #c55394;
+}
+header > div {
+  margin-left: 3%;
+}
+
+header a {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+/*** Effet hover sur les elements du menu***/
+header a:hover {
+  background-color: #eb43a3;
+}
+
+/*** Droite ***/
+#menuLogo {
+  float: left;
+}
+
+#menuLogo a {
+  font-size: 1.5em;
+  padding: 0.35em;
+}
+
+/*** Gauche ***/
+header > div nav {
+  float: right;
+  margin-right: 3%;
+}
+
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul li {
+  float: left;
+}
+
+nav > ul li a {
+  display: inline-block;
+  padding: 0.9rem;
+}
+
+/* permet d' enlever certain effet indésirible de la propriété float
+ en insérent un contenu vide apres le le conténeur des flottant ::after, puis annulé 
+ les flottant, puis et mettant lélement endisplay table
+
+*/
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
