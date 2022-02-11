@@ -10,7 +10,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial,sans-serf;
+  font-family: Arial, sans-serf;
+  background-image: url("../img/background.png");
 }
 
 /************ style partagé par plusieur élement **********************/
@@ -38,7 +39,6 @@ header a {
   display: inline-block;
   text-decoration: none;
 }
-
 
 /*** Effet hover sur les elements du menu***/
 header a:hover {
@@ -76,7 +76,7 @@ nav > ul li a {
   display: inline-block;
 }
 /**************** Devise ********************/
-#devise h1{
+#devise h1 {
   margin: 0;
   text-align: center;
   padding: 5rem 0 2rem;
@@ -85,6 +85,93 @@ nav > ul li a {
   background-image: url("../img/rainbow.png");
 }
 
+/******************** Contenu principale *****************************/
+main {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  background-color: #fff;
+  box-shadow: 0 0 1rem #333;
+}
+
+/*** Les figure ***/
+.col-25 {
+  margin: 0;
+  padding: 0.5rem;
+  width: 25%;
+  float: left;
+  transition: 1s all linear;
+}
+
+figure[class="col-25"] > img {
+  width: 100%;
+}
+
+figure[class="col-25"] > img + figcaption {
+  color: white;
+  bottom: 1.6rem;
+  padding: 0.2rem 5re;
+  text-align: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+figure[class="col-25"]:hover {
+  z-index: 3;
+  position: relative;
+  transform: scale(1.3);
+}
+
+/*** Information  ***/
+
+iframe {
+  border: 0;
+  width: 55%;
+  float: left;
+  height: 450px;
+}
+
+.info {
+  width: 45%;
+  float: left;
+  padding: 1rem;
+}
+
+#email {
+  width: 50%;
+  display: block;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 0;
+  border: 2px solid gray;
+}
+
+#email:focus,
+#email:focus-visible {
+  outline: 0;
+  border-radius: 0;
+  border: 2px solid #eb43a3;
+  box-shadow: 0 0 1rem #c55394;
+}
+
+#btn-valider {
+  color: #fff;
+  border: none;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background-color: #c55394;
+}
+
+#btn-valider:focus,
+#btn-valider:hover,
+#btn-valider:focus-visible {
+  border-radius: 0;
+  border-radius: 0.3rem;
+  outline: 1px solid#eb43a3;
+  box-shadow: 0 0 0.5rem #eb43a3;
+}
 
 /* permet d' enlever certain effet indésirible de la propriété float
  en insérent un contenu vide apres le le conténeur des flottant ::after, puis annulé 
@@ -94,6 +181,6 @@ nav > ul li a {
 
 .clearfix::after {
   content: "";
-  display: table;
   clear: both;
+  display: table;
 }
